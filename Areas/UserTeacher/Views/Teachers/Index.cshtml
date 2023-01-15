@@ -1,0 +1,11 @@
+@model IEnumerable<NewQuizApp.Models.Teacher>
+
+<ul class="">
+    @foreach (var item in Model)
+    {
+        <li>
+            @item.teacher_name
+            <br>
+        </li>
+    }
+</ul>

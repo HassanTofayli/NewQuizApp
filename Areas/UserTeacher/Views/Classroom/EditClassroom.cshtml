@@ -1,0 +1,49 @@
+﻿@model NewQuizApp.Models.Classroom;
+
+<form asp-action="EditClassRoom" class="m-5">
+    
+<div asp-validation-summary="All"></div>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-6">
+                <div class="form-floating w-100 ">
+                    <input asp-for="course_name" placeholder="Enter ClassRoom name" class="form-control" type="text" id="name">
+                    <label for="name"> Name:</label>
+                    <span asp-validation-for="course_name" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <div class="form-floating w-100 ">
+                    <input asp-for="Description" placeholder="Description: " class="form-control" type="text" id="name">
+                    <label for="name">Description:</label>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col">
+                <div class="form-floating w-100 ">
+                    <input asp-for="TeacherId" placeholder="TeacherId: " class="form-control" type="number" id="name">
+                    <label for="name">TeacherId:</label>
+                    <span asp-validation-for="TeacherId" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col">
+                <div class="form-floating w-100 ">
+                    <input asp-for="teacher_name" placeholder="teacher_name: " class="form-control" type="text" id="name">
+                    <label for="name">teacher_name:</label>
+                    <span asp-validation-for="teacher_name" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-success" value="Update"></input>
+    </div>
+</form>
+
