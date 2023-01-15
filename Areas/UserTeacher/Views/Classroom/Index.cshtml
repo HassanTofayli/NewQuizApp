@@ -1,7 +1,7 @@
-﻿@model IEnumerable<NewQuizApp.Models.Classroom>
+﻿@model IEnumerable<Classroom>
 
 
-<a asp-controller="Classroom" asp-action="AddClassroom" class="btn btn-primary align-content-end">Create new Class Room</a>
+<a asp-area="UserTeacher" asp-controller="Classroom" asp-action="AddClassroom" class="btn btn-primary align-content-end">Create new Class Room</a>
 
 <ul class="cards">
     @foreach (var item in Model)
@@ -14,7 +14,7 @@
             @item.teacher_name
             <br/>
             <br/>
-            <a asp-controller="Classroom" asp-action="EditClassroom" asp-route-id="@item.ClassroomId" class="btn btn-primary align-content-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16"></svg></a>
+            <a asp-area="UserTeacher" asp-controller="Classroom" asp-action="EditClassroom" asp-route-id="@item.ClassroomId" class="btn btn-primary align-content-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16"></svg></a>
             
         </li>
     }

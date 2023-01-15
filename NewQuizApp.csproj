@@ -23,6 +23,7 @@
       <Folder Include="Areas\UserStudent\Models" />
       <Folder Include="Areas\UserTeacher\Data" />
       <Folder Include="Areas\UserTeacher\Models" />
+      <Folder Include="Models\ViewModels" />
     </ItemGroup>
 
     <ItemGroup>

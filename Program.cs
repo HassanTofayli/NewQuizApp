@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using NewQuizApp.Data;
 using NewQuizApp.Interfaces;
 using NewQuizApp.Repos;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,9 @@ builder.Services.AddScoped<IClassroomRepo, ClassroomRepo>();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")
 ));
+
+builder.Services.AddDefaultIdentity<IdentityUser>()//options => options.SignIn.RequireConfirmedAccount = true
+    .AddEntityFrameworkStores<AppDbContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,8 +34,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
-app.UseAuthorization();
 app.UseAuthorization();
 
 app.MapControllerRoute(

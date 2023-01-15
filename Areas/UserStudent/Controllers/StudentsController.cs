@@ -5,6 +5,7 @@ using NewQuizApp.Interfaces;
 
 namespace NewQuizApp.Controllers;
 
+
 [Area("userstudent")]
 public class StudentsController : Controller
 {
